@@ -11,10 +11,10 @@ using System.Configuration;
 /// </summary>
 public class SQLBase
 {
-    string server = "";
-    string user = "";
-    string pass = "";
-    string workdb = "gameid_v1";
+    string server = "localhost,1433";
+    string user = "sa";
+    string pass = "DHe4843c";
+    string workdb = "WarInc";
 
     SqlConnection conn_ = null;
 
@@ -22,22 +22,22 @@ public class SQLBase
     {
         if (ConfigurationManager.AppSettings.Get("WO_Region") == "RU")
         {
-            server = "localhost,11433";
+            server = "localhost,1433";
             //server = "rudb1.thewarinc.com,11433";
-            user = "WOAdmin";
-            pass = "frtV4zAqo";
+            user = "sa";
+            pass = "DHe4843c";
         }
         else if (ConfigurationManager.AppSettings.Get("WO_Region") == "PH")
         {
             server = "localhost,1433";
-            user = "war.inc2012";
-            pass = "war!nc@ko321";
+            user = "sa";
+            pass = "DHe4843c";
         }
         else
         {
-            server = "db1.thewarinc.com,11433";
-            user = "game_api_user";
-            pass = "b2agrickw";
+            server = "localhost,1433";
+            user = "sa";
+            pass = "DHe4843c";
         }
     }
 
